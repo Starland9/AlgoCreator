@@ -1,5 +1,5 @@
 from PyQt6.QtCore import QThreadPool
-from PyQt6.QtWidgets import QApplication, QMainWindow, QVBoxLayout, QWidget, QLabel, QTextEdit, QPushButton, \
+from PyQt6.QtWidgets import QMainWindow, QVBoxLayout, QWidget, QLabel, QTextEdit, QPushButton, \
     QTextBrowser
 
 from style import style
