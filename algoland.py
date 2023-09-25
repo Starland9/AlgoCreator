@@ -69,4 +69,3 @@ class Algoland(QMainWindow):
         self.convert_button.setEnabled(True)
         self.convert_button.setText("Lancer la machine")
 
-
