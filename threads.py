@@ -27,7 +27,6 @@ class AlgoWorker(QRunnable):
                                 f"utilise le html pour representer cela"
                                 f": {self.source_text}"}
                 ],
-                provider=g4f.Provider.Aichat,
             )
 
             self.signals.algoCreated.emit(result)
