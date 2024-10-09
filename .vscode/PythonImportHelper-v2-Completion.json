@@ -1,0 +1,175 @@
+[
+    {
+        "label": "QThreadPool",
+        "importPath": "PyQt6.QtCore",
+        "description": "PyQt6.QtCore",
+        "isExtraImport": true,
+        "detail": "PyQt6.QtCore",
+        "documentation": {}
+    },
+    {
+        "label": "QRunnable",
+        "importPath": "PyQt6.QtCore",
+        "description": "PyQt6.QtCore",
+        "isExtraImport": true,
+        "detail": "PyQt6.QtCore",
+        "documentation": {}
+    },
+    {
+        "label": "pyqtSlot",
+        "importPath": "PyQt6.QtCore",
+        "description": "PyQt6.QtCore",
+        "isExtraImport": true,
+        "detail": "PyQt6.QtCore",
+        "documentation": {}
+    },
+    {
+        "label": "QObject",
+        "importPath": "PyQt6.QtCore",
+        "description": "PyQt6.QtCore",
+        "isExtraImport": true,
+        "detail": "PyQt6.QtCore",
+        "documentation": {}
+    },
+    {
+        "label": "pyqtSignal",
+        "importPath": "PyQt6.QtCore",
+        "description": "PyQt6.QtCore",
+        "isExtraImport": true,
+        "detail": "PyQt6.QtCore",
+        "documentation": {}
+    },
+    {
+        "label": "QMainWindow",
+        "importPath": "PyQt6.QtWidgets",
+        "description": "PyQt6.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PyQt6.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QVBoxLayout",
+        "importPath": "PyQt6.QtWidgets",
+        "description": "PyQt6.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PyQt6.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QWidget",
+        "importPath": "PyQt6.QtWidgets",
+        "description": "PyQt6.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PyQt6.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QLabel",
+        "importPath": "PyQt6.QtWidgets",
+        "description": "PyQt6.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PyQt6.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QTextEdit",
+        "importPath": "PyQt6.QtWidgets",
+        "description": "PyQt6.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PyQt6.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QPushButton",
+        "importPath": "PyQt6.QtWidgets",
+        "description": "PyQt6.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PyQt6.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "\\",
+        "importPath": "PyQt6.QtWidgets",
+        "description": "PyQt6.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PyQt6.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QApplication",
+        "importPath": "PyQt6.QtWidgets",
+        "description": "PyQt6.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PyQt6.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "style",
+        "importPath": "style",
+        "description": "style",
+        "isExtraImport": true,
+        "detail": "style",
+        "documentation": {}
+    },
+    {
+        "label": "AlgoWorker",
+        "importPath": "threads",
+        "description": "threads",
+        "isExtraImport": true,
+        "detail": "threads",
+        "documentation": {}
+    },
+    {
+        "label": "Algoland",
+        "importPath": "algoland",
+        "description": "algoland",
+        "isExtraImport": true,
+        "detail": "algoland",
+        "documentation": {}
+    },
+    {
+        "label": "g4f",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "g4f",
+        "description": "g4f",
+        "detail": "g4f",
+        "documentation": {}
+    },
+    {
+        "label": "Algoland",
+        "kind": 6,
+        "importPath": "algoland",
+        "description": "algoland",
+        "peekOfCode": "class Algoland(QMainWindow):\n    def __init__(self):\n        super().__init__()\n        self.setWindowTitle(\"AlgoLand\")\n        self.setMinimumSize(800, 600)\n        # Widget principal\n        main_widget = QWidget(self)\n        self.setCentralWidget(main_widget)\n        self.threadPool = QThreadPool()\n        # Layout principal",
+        "detail": "algoland",
+        "documentation": {}
+    },
+    {
+        "label": "style",
+        "kind": 5,
+        "importPath": "style",
+        "description": "style",
+        "peekOfCode": "style = \"\"\"QMainWindow {\n    background-color: #222222;\n}\nQLabel {\n    color: #FFFFFF;\n    font-size: 18px;\n    font-weight: bold;\n}\nQTextEdit {\n    color: #FFFFFF;",
+        "detail": "style",
+        "documentation": {}
+    },
+    {
+        "label": "IntelliSignals",
+        "kind": 6,
+        "importPath": "threads",
+        "description": "threads",
+        "peekOfCode": "class IntelliSignals(QObject):\n    algoCreated = pyqtSignal(str)\n# noinspection PyUnresolvedReferences\nclass AlgoWorker(QRunnable):\n    def __init__(self, source_text: str):\n        super(AlgoWorker, self).__init__()\n        self.source_text = source_text\n        self.signals = IntelliSignals()\n    @pyqtSlot()\n    def run(self) -> None:",
+        "detail": "threads",
+        "documentation": {}
+    },
+    {
+        "label": "AlgoWorker",
+        "kind": 6,
+        "importPath": "threads",
+        "description": "threads",
+        "peekOfCode": "class AlgoWorker(QRunnable):\n    def __init__(self, source_text: str):\n        super(AlgoWorker, self).__init__()\n        self.source_text = source_text\n        self.signals = IntelliSignals()\n    @pyqtSlot()\n    def run(self) -> None:\n        try:\n            result = g4f.ChatCompletion.create(\n                model=g4f.models.gpt_35_turbo,",
+        "detail": "threads",
+        "documentation": {}
+    }
+]

@@ -20,12 +20,16 @@ class AlgoWorker(QRunnable):
             result = g4f.ChatCompletion.create(
                 model=g4f.models.gpt_35_turbo,
                 messages=[
-                    {"role": "user",
-                     "content": f"Grace a ce que je vais de demander . stp donne moi un algorithme avec un style "
-                                f"comme dans aglobox en francais avec les indentation et tout et aussi la coloration "
-                                f"syntaxique."
-                                f"utilise le html pour representer cela"
-                                f": {self.source_text}"}
+                    {
+                        "role": "user",
+                        "content": (
+                            "Grâce à ce que je vais te demander, s'il te plaît, fournis-moi un algorithme "
+                            "écrit en français avec un style similaire à celui utilisé dans Aglobox. "
+                            "Assure-toi d'inclure une indentation correcte et une coloration syntaxique. "
+                            "Représente le tout en utilisant du HTML. Voici le texte source :\n\n"
+                            f"{self.source_text}"
+                        ),
+                    }
                 ],
             )
 
