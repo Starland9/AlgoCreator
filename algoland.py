@@ -60,7 +60,7 @@ class Algoland(QMainWindow):
         algo_worker.signals.algoCreated.connect(self.algo_created)
         self.convert_button.setEnabled(False)
         self.convert_button.setStyleSheet("background-color: #336633")
-        self.convert_button.setText("La machine est en train de convertir ...")
+        self.convert_button.setText("La machine est en train de créer ton algo ...")
         # Résultat de l'algorithme
 
     def algo_created(self, result):

@@ -18,7 +18,7 @@ class AlgoWorker(QRunnable):
     def run(self) -> None:
         try:
             result = g4f.ChatCompletion.create(
-                model=g4f.models.gpt_35_turbo,
+                model=g4f.models.qwen_2_72b,
                 messages=[
                     {
                         "role": "user",
@@ -26,7 +26,7 @@ class AlgoWorker(QRunnable):
                             "Grâce à ce que je vais te demander, s'il te plaît, fournis-moi un algorithme "
                             "écrit en français avec un style similaire à celui utilisé dans Aglobox. "
                             "Assure-toi d'inclure une indentation correcte et une coloration syntaxique. "
-                            "Représente le tout en utilisant du HTML. Voici le texte source :\n\n"
+                            "Représente le tout en utilisant du HTML. Voici le texte source :\n\n et tu peux laisser les comodité et donner juste l'algorithme stp"
                             f"{self.source_text}"
                         ),
                     }
