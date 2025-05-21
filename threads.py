@@ -6,7 +6,6 @@ import g4f
 class IntelliSignals(QObject):
     algoCreated = pyqtSignal(str)
 
-
 # noinspection PyUnresolvedReferences
 class AlgoWorker(QRunnable):
     def __init__(self, source_text: str):
